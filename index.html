@@ -118,7 +118,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -146,6 +146,93 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/13/Codeforces-Round-1003-Div-4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="znzryb">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="znzryb's blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | znzryb's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/02/13/Codeforces-Round-1003-Div-4/" class="post-title-link" itemprop="url">Codeforces-Round-1003-Div-4</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-02-13 23:33:51" itemprop="dateCreated datePublished" datetime="2025-02-13T23:33:51+08:00">2025-02-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-02-14 11:51:37" itemprop="dateModified" datetime="2025-02-14T11:51:37+08:00">2025-02-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/codeforces%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">codeforces题解</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="C1-Skibidus-and-Fanum-Tax-easy-version"><a href="#C1-Skibidus-and-Fanum-Tax-easy-version" class="headerlink" title="C1. Skibidus and Fanum Tax (easy version)"></a>C1. Skibidus and Fanum Tax (easy version)</h2><p>还WA了两次，不算特别会做这种题目<br>第一次WA记载在了注释中，第二次WA是因为</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (t &lt; A[i] &amp;&amp; t &gt;= A[i - <span class="number">1</span>]) </span><br></pre></td></tr></table></figure>
+<p>我把这里面的&gt;&#x3D;写成小于了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Problem: C1. Skibidus and Fanum Tax (easy version)</span></span><br><span class="line"><span class="comment">// Contest: Codeforces - Codeforces Round 1003 (Div. 4)</span></span><br><span class="line"><span class="comment">// URL: https://codeforces.com/contest/2065/problem/C1</span></span><br><span class="line"><span class="comment">// Memory Limit: 256 MB</span></span><br><span class="line"><span class="comment">// Time Limit: 2000 ms</span></span><br><span class="line"><span class="comment">// by znzryb</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Powered by CP Editor (https://cpeditor.org)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> FOR(i, a, b) for (int i = (a); i &lt;= (b); ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ROF(i, a, b) for (int i = (a); i &gt;= (b); --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(x) x.begin(), x.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CLR(i, a) memset(i, a, sizeof(i))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fi first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> se second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SZ(a) ((int)a.size())</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> ull;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;ll, ll&gt; pll;</span><br><span class="line"><span class="keyword">typedef</span> array&lt;ll, 3&gt; arr;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> DB;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;DB, DB&gt; pdd;</span><br><span class="line"><span class="keyword">constexpr</span> ll MAXN = <span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">1e6</span>) + <span class="number">10</span>, INF = <span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">5e18</span>) + <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">ll N, M, T, A[MAXN], B[MAXN];  <span class="comment">// backUp[MAXN];</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  cin &gt;&gt; N &gt;&gt; M;</span><br><span class="line">  <span class="built_in">FOR</span>(i, <span class="number">1</span>, N) &#123; cin &gt;&gt; A[i]; &#125;</span><br><span class="line">  <span class="built_in">FOR</span>(i, <span class="number">1</span>, M) &#123; cin &gt;&gt; B[i]; &#125;</span><br><span class="line">  <span class="comment">// sort(A + 1, A + 1 + N);</span></span><br><span class="line">  A[<span class="number">0</span>] = -INF;</span><br><span class="line">  A[N + <span class="number">1</span>] = INF;  <span class="comment">// 确保越界也没事情</span></span><br><span class="line">  <span class="built_in">FOR</span>(i, <span class="number">1</span>, N) &#123;</span><br><span class="line">    ll t = B[<span class="number">1</span>] - A[i];</span><br><span class="line">    <span class="keyword">if</span> (t &lt; A[i] &amp;&amp; t &gt;= A[i - <span class="number">1</span>]) &#123;</span><br><span class="line">      A[i] = t;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (A[i - <span class="number">1</span>] &gt; A[i] &amp;&amp; t &gt;= A[i - <span class="number">1</span>]) &#123;</span><br><span class="line">      A[i] = t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (A[i] &lt; A[i - <span class="number">1</span>]) &#123;</span><br><span class="line">      cout &lt;&lt; <span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  cout &lt;&lt; <span class="string">&quot;YES\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">  cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">  cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">  cin &gt;&gt; T;</span><br><span class="line">  <span class="keyword">while</span> (T--) &#123;</span><br><span class="line">    <span class="built_in">solve</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">WA</span></span><br><span class="line"><span class="comment">https://codeforces.com/contest/2065/submission/306026186</span></span><br><span class="line"><span class="comment">1</span></span><br><span class="line"><span class="comment">4 1</span></span><br><span class="line"><span class="comment">3 4 1 5</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">会在这种数据上WA</span></span><br><span class="line"><span class="comment">他是指对每个i都能进行一次这种操作</span></span><br><span class="line"><span class="comment">AC</span></span><br><span class="line"><span class="comment">https://codeforces.com/contest/2065/submission/306027498</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
