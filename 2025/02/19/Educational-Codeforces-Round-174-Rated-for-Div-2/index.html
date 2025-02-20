@@ -27,7 +27,7 @@
 <meta property="og:description" content="这场总体我打的挺爽的，直接做出3题，对于我这个灰名来说也是首次了 A. Was there an Array?没什么好说的，就是模拟，然后检验 AC 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-02-19T02:23:00.000Z">
-<meta property="article:modified_time" content="2025-02-19T02:43:39.376Z">
+<meta property="article:modified_time" content="2025-02-20T09:48:27.718Z">
 <meta property="article:author" content="znzryb">
 <meta name="twitter:card" content="summary">
 
@@ -211,9 +211,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2025-02-19 10:23:00 / Modified: 10:43:39" itemprop="dateCreated datePublished" datetime="2025-02-19T10:23:00+08:00">2025-02-19</time>
+      <time title="Created: 2025-02-19 10:23:00" itemprop="dateCreated datePublished" datetime="2025-02-19T10:23:00+08:00">2025-02-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-02-20 17:48:27" itemprop="dateModified" datetime="2025-02-20T17:48:27+08:00">2025-02-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -247,7 +253,7 @@
 <h2 id="C-Beautiful-Sequence"><a href="#C-Beautiful-Sequence" class="headerlink" title="C. Beautiful Sequence"></a>C. Beautiful Sequence</h2><p>这个题目官方打了dp，可能是其他解法吧，反正我的做法用不到dp，最重要的反而是你的高中组合知识要比较扎实。</p>
 <p>当然，首先你要发现关键是首数和尾数，首数一定是序列最里最小的，尾数一定是序列里最大的，而且这个最大，最小是严格的。</p>
 <p>因此，我们得出结论开头一定是1，结尾一定是3，中间是2</p>
-<p>众所周知，nC1+nC2+nC3+…+nCn&#x3D;(2<strong>n)-1，那么每多加一个2，那么对于一个1来讲，可能性就多了2</strong>(n-1)</p>
+<p>众所周知，nC1+nC2+nC3+…+nCn&#x3D;(2^n)-1，那么每多加一个2，那么对于一个1来讲，可能性就多了2^(n-1)</p>
 <p>当然对于多个1，情况会略微复杂一点，具体请看下面的代码。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">FOR</span>(i,<span class="number">1</span>,N)&#123;</span><br><span class="line">	<span class="keyword">if</span>(A[i]==<span class="number">2</span>)&#123;</span><br><span class="line">		cnt<span class="number">2.</span><span class="built_in">add</span>(last1Pos,idx);</span><br><span class="line">		idx=(idx*<span class="number">2</span>)%mod;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(A[i]==<span class="number">1</span>)&#123;</span><br><span class="line">		last1Pos=i;</span><br><span class="line">		++idx;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		ans=(ans+cnt<span class="number">2.</span><span class="built_in">query</span>(<span class="number">1</span>,i))%mod;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后我的代码有点小复杂，不小心用了树状数组，其实根本不需要，用一个数就够了，我写的时候太兴奋了。</p>
