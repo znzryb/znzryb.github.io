@@ -36,6 +36,9 @@
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>znzryb's blog</title>
   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-06S160M9GG"></script>
+  <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-06S160M9GG","only_pageview":false,"measure_protocol_api_secret":null}</script>
+  <script src="/js/third-party/analytics/google-analytics.js"></script>
 
 
 
@@ -145,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -168,6 +171,89 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/22/AtCoder-Beginner-Contest-393/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="znzryb">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="znzryb's blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | znzryb's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/02/22/AtCoder-Beginner-Contest-393/" class="post-title-link" itemprop="url">AtCoder-Beginner-Contest-393</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-02-22 19:06:04 / Modified: 23:50:18" itemprop="dateCreated datePublished" datetime="2025-02-22T19:06:04+08:00">2025-02-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/codeforces%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">codeforces题解</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="D-Colorful-Bracket-Sequence"><a href="#D-Colorful-Bracket-Sequence" class="headerlink" title="D - Colorful Bracket Sequence &#x2F;"></a>D - Colorful Bracket Sequence &#x2F;</h2><p>唉，这种括号匹配的还是挺适合用栈的，赛时的时候先是看错了，接着是想复杂了，不多评价了</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Problem: D - Colorful Bracket Sequence</span></span><br><span class="line"><span class="comment">// Contest: AtCoder - KAJIMA CORPORATION CONTEST 2025 (AtCoder Beginner Contest 394)</span></span><br><span class="line"><span class="comment">// URL: https://atcoder.jp/contests/abc394/tasks/abc394_d</span></span><br><span class="line"><span class="comment">// Memory Limit: 1024 MB</span></span><br><span class="line"><span class="comment">// Time Limit: 2000 ms</span></span><br><span class="line"><span class="comment">// by znzryb</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">// Powered by CP Editor (https://cpeditor.org)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> FOR(i, a, b) for (int i = (a); i &lt;= (b); ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ROF(i, a, b) for (int i = (a); i &gt;= (b); --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(x) x.begin(),x.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CLR(i,a) memset(i,a,sizeof(i))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fi first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> se second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SZ(a) ((int) a.size())</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> ull;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;ll,ll&gt; pll;</span><br><span class="line"><span class="keyword">typedef</span> array&lt;ll,3&gt; arr;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> DB;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;DB,DB&gt; pdd;</span><br><span class="line"><span class="keyword">constexpr</span> ll MAXN=<span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">2e5</span>)<span class="number">+10</span>,INF=<span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">5e18</span>)<span class="number">+3</span>;</span><br><span class="line"></span><br><span class="line">ll N,M,T;</span><br><span class="line">string S;</span><br><span class="line"><span class="comment">// vector&lt;ll&gt; pos[250];</span></span><br><span class="line"><span class="comment">// ll tran[250];</span></span><br><span class="line"><span class="comment">// bool dp[MAXN];</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">bool</span> <span class="title">isMatch</span><span class="params">(<span class="type">const</span> <span class="type">char</span> &amp;a,<span class="type">const</span> <span class="type">char</span> &amp;b)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(a==<span class="string">&#x27;(&#x27;</span> &amp;&amp; b==<span class="string">&#x27;)&#x27;</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">if</span>(a==<span class="string">&#x27;&lt;&#x27;</span> &amp;&amp; b==<span class="string">&#x27;&gt;&#x27;</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">if</span>(a==<span class="string">&#x27;[&#x27;</span> &amp;&amp; b==<span class="string">&#x27;]&#x27;</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	cin&gt;&gt;S;</span><br><span class="line">	<span class="keyword">if</span>(<span class="built_in">SZ</span>(S)==<span class="number">1</span>)&#123;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;No\n&quot;</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	N=<span class="built_in">SZ</span>(S);</span><br><span class="line">	<span class="keyword">if</span>(N%<span class="number">2</span>!=<span class="number">0</span>)&#123;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;No\n&quot;</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	S=<span class="string">&quot;0&quot;</span>+S;</span><br><span class="line">	<span class="keyword">if</span>(S[<span class="number">1</span>]==<span class="string">&#x27;)&#x27;</span> || S[<span class="number">1</span>]==<span class="string">&#x27;]&#x27;</span> || S[<span class="number">1</span>]==<span class="string">&#x27;&gt;&#x27;</span>)&#123;</span><br><span class="line">		cout&lt;&lt;<span class="string">&quot;No\n&quot;</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// tran[&#x27;(&#x27;]=&#x27;)&#x27;;</span></span><br><span class="line">	<span class="comment">// tran[&#x27;)&#x27;]=&#x27;(&#x27;;</span></span><br><span class="line">	<span class="comment">// tran[&#x27;[&#x27;]=&#x27;]&#x27;;</span></span><br><span class="line">	<span class="comment">// tran[&#x27;]&#x27;]=&#x27;[&#x27;;</span></span><br><span class="line">	<span class="comment">// tran[&#x27;&lt;&#x27;]=&#x27;&gt;&#x27;;</span></span><br><span class="line">	<span class="comment">// tran[&#x27;&gt;&#x27;]=&#x27;&lt;&#x27;;</span></span><br><span class="line">	vector&lt;<span class="type">char</span>&gt; ls;</span><br><span class="line">	<span class="built_in">FOR</span>(i,<span class="number">1</span>,N)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!ls.<span class="built_in">empty</span>())&#123;</span><br><span class="line">			<span class="keyword">if</span>(<span class="built_in">isMatch</span>(ls.<span class="built_in">back</span>(),S[i])) ls.<span class="built_in">pop_back</span>();</span><br><span class="line">			<span class="keyword">else</span> ls.<span class="built_in">pb</span>(S[i]);</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			ls.<span class="built_in">pb</span>(S[i]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;(ls.<span class="built_in">empty</span>()?<span class="string">&quot;Yes&quot;</span>:<span class="string">&quot;No&quot;</span>)&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">	<span class="comment">// list&lt;char&gt; ls;</span></span><br><span class="line">	<span class="comment">// FOR(i,1,N)&#123;</span></span><br><span class="line">		<span class="comment">// ls.pb(S[i]);</span></span><br><span class="line">	<span class="comment">// &#125;</span></span><br><span class="line">	<span class="comment">// while(!ls.empty())&#123;</span></span><br><span class="line">		<span class="comment">// bool isOp=false;</span></span><br><span class="line">		<span class="comment">// for(list&lt;char&gt;::iterator it=ls.begin();it!=ls.end();)&#123;</span></span><br><span class="line">			<span class="comment">// list&lt;char&gt;::iterator nit=next(it);</span></span><br><span class="line">			<span class="comment">// list&lt;char&gt;::iterator nnit=next(nit);</span></span><br><span class="line">			<span class="comment">// if(isMatch(*it,*nit))&#123;</span></span><br><span class="line">				<span class="comment">// ls.erase(it);</span></span><br><span class="line">				<span class="comment">// ls.erase(nit);</span></span><br><span class="line">				<span class="comment">// it=nnit;</span></span><br><span class="line">				<span class="comment">// isOp=true;</span></span><br><span class="line">			<span class="comment">// &#125;else&#123;</span></span><br><span class="line">				<span class="comment">// it=nit;</span></span><br><span class="line">			<span class="comment">// &#125;</span></span><br><span class="line">		<span class="comment">// &#125;</span></span><br><span class="line">		<span class="comment">// if(!isOp)&#123;</span></span><br><span class="line">			<span class="comment">// cout&lt;&lt;&quot;No\n&quot;;</span></span><br><span class="line">			<span class="comment">// return 0;</span></span><br><span class="line">		<span class="comment">// &#125;</span></span><br><span class="line">	<span class="comment">// &#125;</span></span><br><span class="line">	<span class="comment">// cout&lt;&lt;&quot;Yes\n&quot;;</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">// dp[0]=true;</span></span><br><span class="line">	<span class="comment">// FOR(i,1,SZ(S)-1)&#123;</span></span><br><span class="line">		<span class="comment">// if(chLef(i))&#123;</span></span><br><span class="line">			<span class="comment">// if(dp[i-1] &amp;&amp; chLef(i))&#123;</span></span><br><span class="line">				<span class="comment">// pos[S[i]].pb(i);</span></span><br><span class="line">			<span class="comment">// &#125;</span></span><br><span class="line">		<span class="comment">// &#125;else&#123;</span></span><br><span class="line">			<span class="comment">// if(!pos[tran[S[i]]].empty()) dp[i]=true;</span></span><br><span class="line">			<span class="comment">// else dp[i]=false;</span></span><br><span class="line">		<span class="comment">// &#125;</span></span><br><span class="line">	<span class="comment">// &#125;</span></span><br><span class="line">	<span class="comment">// cout&lt;&lt;(dp[N]?&quot;Yes&quot;:&quot;No&quot;)&lt;&lt;&#x27;\n&#x27;;</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">AC</span></span><br><span class="line"><span class="comment">https://atcoder.jp/contests/abc394/submissions/63072532</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -795,7 +881,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-02-18 22:28:07" itemprop="dateModified" datetime="2025-02-18T22:28:07+08:00">2025-02-18</time>
+      <time title="Modified: 2025-02-22 12:49:42" itemprop="dateModified" datetime="2025-02-22T12:49:42+08:00">2025-02-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
