@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -171,6 +171,170 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://znzryb.github.io/2025/02/25/Educational-Codeforces-Round-171/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="znzryb">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="znzryb's blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | znzryb's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/02/25/Educational-Codeforces-Round-171/" class="post-title-link" itemprop="url">Educational-Codeforces-Round-171</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-02-25 23:47:36 / Modified: 23:48:47" itemprop="dateCreated datePublished" datetime="2025-02-25T23:47:36+08:00">2025-02-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/codeforces%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">codeforces题解</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="A-Perpendicular-Segments"><a href="#A-Perpendicular-Segments" class="headerlink" title="A - Perpendicular Segments"></a>A - Perpendicular Segments</h2><p>45度构造，还有一些特判</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2026/submission/307769559">AC</a></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Problem: A. Perpendicular Segments</span></span><br><span class="line"><span class="comment">// Contest: Codeforces - Educational Codeforces Round 171 (Rated for Div. 2)</span></span><br><span class="line"><span class="comment">// URL: https://codeforces.com/contest/2026/problem/A</span></span><br><span class="line"><span class="comment">// Memory Limit: 256 MB</span></span><br><span class="line"><span class="comment">// Time Limit: 2000 ms</span></span><br><span class="line"><span class="comment">// by znzryb</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">// Powered by CP Editor (https://cpeditor.org)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> FOR(i, a, b) for (long long i = (a); i &lt;= (b); ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ROF(i, a, b) for (long long i = (a); i &gt;= (b); --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(x) x.begin(),x.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CLR(i,a) memset(i,a,sizeof(i))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fi first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> se second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SZ(a) ((int) a.size())</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> ull;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;ll,ll&gt; pll;</span><br><span class="line"><span class="keyword">typedef</span> array&lt;ll,3&gt; arr;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> DB;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;DB,DB&gt; pdd;</span><br><span class="line"><span class="keyword">constexpr</span> ll MAXN=<span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">1e6</span>)<span class="number">+10</span>,INF=<span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">5e18</span>)<span class="number">+3</span>;</span><br><span class="line"></span><br><span class="line">ll X,Y,K,T,A[MAXN];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cin&gt;&gt;X&gt;&gt;Y&gt;&gt;K;</span><br><span class="line">	<span class="keyword">if</span>(X&gt;=K &amp;&amp; Y&gt;=K)&#123;</span><br><span class="line">		cout&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;X&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">		cout&lt;&lt;X&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;X&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;Y&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(X==Y)&#123;</span><br><span class="line">		cout&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;X&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;X&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">		cout&lt;&lt;X&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;Y&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(X&gt;Y)&#123;</span><br><span class="line">		cout&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;Y&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;Y&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">		cout&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;Y&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;Y&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		cout&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;X&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;X&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">		cout&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;X&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;X&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;<span class="number">0</span>&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	cin&gt;&gt;T;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">solve</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">AC</span></span><br><span class="line"><span class="comment">https://codeforces.com/contest/2026/submission/307769559</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://znzryb.github.io/2025/02/25/Educational-Codeforces-Round-172/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="znzryb">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="znzryb's blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | znzryb's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/02/25/Educational-Codeforces-Round-172/" class="post-title-link" itemprop="url">Educational-Codeforces-Round-172 (D题解)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2025-02-25 15:58:13 / Modified: 16:23:40" itemprop="dateCreated datePublished" datetime="2025-02-25T15:58:13+08:00">2025-02-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/codeforces%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">codeforces题解</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="D-Recommendations"><a href="#D-Recommendations" class="headerlink" title="D. Recommendations"></a>D. Recommendations</h2><p>如果说你发现一道题目好像这个输入和顺序无关，那么大概率是要排序的（除非你判断错了，否则排了肯定没错）</p>
+<p>这个我还是能看出来的，但是排完了以后那？如果是比较难的题目，可能就要结合数据结构了（这题就是）</p>
+<p>当然光结合数据结构（树状数组）我肯定也能稍微做做，但这题还是需要一些技巧，消除一些比较难用树状数组实现的东西。或者直白一点就是“后效性”。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -992,180 +1156,9 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://znzryb.github.io/2025/02/13/CF-1004-D-Object-Identification/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="znzryb">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="znzryb's blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | znzryb's blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/13/CF-1004-D-Object-Identification/" class="post-title-link" itemprop="url">CF-1004-D-Object-Identification</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2025-02-13 22:57:04 / Modified: 23:00:02" itemprop="dateCreated datePublished" datetime="2025-02-13T22:57:04+08:00">2025-02-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/codeforces%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">codeforces题解</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="CF-1004-D-Object-Identification"><a href="#CF-1004-D-Object-Identification" class="headerlink" title="CF-1004-D. Object Identification"></a>CF-1004-D. Object Identification</h1><p>Tags: constructive 构造, graph, interactive problem 交互题, 思维, 贪心 greedy<br>Date: February 13, 2025<br>Difficulty Level: 1800, 绿题<br>Last Edited: February 13, 2025 7:32 PM<br>Source: codeforces<br>Status: AC<br>url: <a target="_blank" rel="noopener" href="https://codeforces.com/contest/2067/problem/D">https://codeforces.com/contest/2067/problem/D</a></p>
-<h2 id="思路讲解"><a href="#思路讲解" class="headerlink" title="思路讲解"></a>思路讲解</h2><p>没有在X中的一点，任何一个点都到达不了，因为在有向图中你不发出边是到达不了任何点的</p>
-<p>如果所有点都在X中，那么就选择一个q1（X[i]&#x3D;&#x3D;1 时的i），一个q2（X[i]&#x3D;&#x3D;N 时的i），他们的曼哈顿距离≥N-1</p>
-<p>但是在这个只有N条边的有向图上，你觉得q1到q2以及q2到q1的有向图路径都大于N-1嘛？显然不可能吧，没那么多边呀，借此就可以判断是有向图还是坐标了。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> &#123;  <span class="comment">// 这种情况难搞一点</span></span><br><span class="line">    <span class="comment">// 因为这种情况理论上来说甚至有可能每个点之间都相互联通在有向图上</span></span><br><span class="line">    <span class="comment">// 但我们可以利用曼哈顿距离的特性来解决</span></span><br><span class="line">    ll q1=<span class="number">0</span>, q2=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">FOR</span>(i, <span class="number">1</span>, N) &#123;</span><br><span class="line">      <span class="keyword">if</span> (X[i] == <span class="number">1</span>)</span><br><span class="line">        q1 = i;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span> (X[i] == N)</span><br><span class="line">        q2 = i;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;? &quot;</span> &lt;&lt; q1 &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; q2 &lt;&lt; endl;</span><br><span class="line">    ll dis1, dis2;</span><br><span class="line">    cin &gt;&gt; dis1;</span><br><span class="line">    <span class="keyword">if</span> (dis1 &lt; N - <span class="number">1</span>) &#123;  <span class="comment">// dis1比最小曼哈顿距离都小，肯定也不对</span></span><br><span class="line">      cout &lt;&lt; <span class="string">&quot;! A&quot;</span> &lt;&lt; endl;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;? &quot;</span> &lt;&lt; q2 &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; q1 &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; dis2;</span><br><span class="line">    <span class="keyword">if</span> (dis2 &lt; N - <span class="number">1</span>) &#123;  <span class="comment">// dis2比最小曼哈顿距离都小，肯定也不对</span></span><br><span class="line">      cout &lt;&lt; <span class="string">&quot;! A&quot;</span> &lt;&lt; endl;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;! B&quot;</span> &lt;&lt; endl;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><p>AC</p>
-<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2067/submission/305909277">https://codeforces.com/contest/2067/submission/305909277</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Problem: D. Object Identification</span></span><br><span class="line"><span class="comment">// Contest: Codeforces - Codeforces Round 1004 (Div. 2)</span></span><br><span class="line"><span class="comment">// URL: https://codeforces.com/contest/2067/problem/D</span></span><br><span class="line"><span class="comment">// Memory Limit: 256 MB</span></span><br><span class="line"><span class="comment">// Time Limit: 2000 ms</span></span><br><span class="line"><span class="comment">// by znzryb</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Powered by CP Editor (https://cpeditor.org)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> FOR(i, a, b) for (int i = (a); i &lt;= (b); ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ROF(i, a, b) for (int i = (a); i &gt;= (b); --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(x) x.begin(), x.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CLR(i, a) memset(i, a, sizeof(i))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fi first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> se second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SZ(a) ((int)a.size())</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> LOCAL</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> ull;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;ll, ll&gt; pll;</span><br><span class="line"><span class="keyword">typedef</span> array&lt;ll, 3&gt; arr;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> DB;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;DB, DB&gt; pdd;</span><br><span class="line"><span class="keyword">constexpr</span> ll MAXN = <span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">2e5</span>) + <span class="number">10</span>, INF = <span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">5e18</span>) + <span class="number">3</span>;</span><br><span class="line"></span><br><span class="line">ll N, T, X[MAXN];</span><br><span class="line"><span class="type">bool</span> vis[MAXN];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">bool</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  cin &gt;&gt; N;</span><br><span class="line">  <span class="keyword">if</span> (N == <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">FOR</span>(i, <span class="number">1</span>, N) &#123; vis[i] = <span class="literal">false</span>; &#125;</span><br><span class="line">  <span class="built_in">FOR</span>(i, <span class="number">1</span>, N) &#123;</span><br><span class="line">    cin &gt;&gt; X[i];</span><br><span class="line">    vis[X[i]] = <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  vector&lt;ll&gt; disN;  <span class="comment">// 没有在X中出现的点</span></span><br><span class="line">  ll app;           <span class="comment">// 随便取一个出现过的点</span></span><br><span class="line">  <span class="built_in">FOR</span>(i, <span class="number">1</span>, N) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!vis[i])</span><br><span class="line">      disN.<span class="built_in">pb</span>(i);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      app = i;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">SZ</span>(disN) &gt;= <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="comment">// 没有在X中的一点，任何一个点都到达不了，因为在有向图中你不发出边是到达不了任何点的</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;? &quot;</span> &lt;&lt; disN[<span class="number">0</span>] &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; app &lt;&lt; endl;</span><br><span class="line">    ll dis;</span><br><span class="line">    cin &gt;&gt; dis;</span><br><span class="line">    <span class="keyword">if</span> (dis == <span class="number">0</span>)</span><br><span class="line">      cout &lt;&lt; <span class="string">&quot;! A&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      cout &lt;&lt; <span class="string">&quot;! B&quot;</span> &lt;&lt; endl;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;  <span class="comment">// 这种情况难搞一点</span></span><br><span class="line">    <span class="comment">// 因为这种情况理论上来说甚至有可能每个点之间都相互联通在有向图上</span></span><br><span class="line">    <span class="comment">// 但我们可以利用曼哈顿距离的特性来解决</span></span><br><span class="line">    ll q1=<span class="number">0</span>, q2=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">FOR</span>(i, <span class="number">1</span>, N) &#123;</span><br><span class="line">      <span class="keyword">if</span> (X[i] == <span class="number">1</span>)</span><br><span class="line">        q1 = i;</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">if</span> (X[i] == N)</span><br><span class="line">        q2 = i;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;? &quot;</span> &lt;&lt; q1 &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; q2 &lt;&lt; endl;</span><br><span class="line">    ll dis1, dis2;</span><br><span class="line">    cin &gt;&gt; dis1;</span><br><span class="line">    <span class="keyword">if</span> (dis1 &lt; N - <span class="number">1</span>) &#123;  <span class="comment">// dis1比最小曼哈顿距离都小，肯定也不对</span></span><br><span class="line">      cout &lt;&lt; <span class="string">&quot;! A&quot;</span> &lt;&lt; endl;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;? &quot;</span> &lt;&lt; q2 &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; q1 &lt;&lt; endl;</span><br><span class="line">    cin &gt;&gt; dis2;</span><br><span class="line">    <span class="keyword">if</span> (dis2 &lt; N - <span class="number">1</span>) &#123;  <span class="comment">// dis2比最小曼哈顿距离都小，肯定也不对</span></span><br><span class="line">      cout &lt;&lt; <span class="string">&quot;! A&quot;</span> &lt;&lt; endl;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;! B&quot;</span> &lt;&lt; endl;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">  cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">  cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">  cin &gt;&gt; T;</span><br><span class="line">  <span class="keyword">while</span> (T--) &#123;</span><br><span class="line">    <span class="type">bool</span> flag = <span class="built_in">solve</span>();</span><br><span class="line">    <span class="keyword">if</span> (!flag) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">AC</span></span><br><span class="line"><span class="comment">https://codeforces.com/contest/2067/submission/305909277</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://znzryb.github.io/2025/02/13/first-post/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="znzryb">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="znzryb's blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | znzryb's blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/13/first-post/" class="post-title-link" itemprop="url">first-post</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2025-02-13 22:27:43" itemprop="dateCreated datePublished" datetime="2025-02-13T22:27:43+08:00">2025-02-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2025-02-16 15:26:26" itemprop="dateModified" datetime="2025-02-16T15:26:26+08:00">2025-02-16</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
 
 </div>
   </main>
