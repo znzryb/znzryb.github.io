@@ -247,7 +247,7 @@
     <div class="post-body" itemprop="articleBody"><p>好像是一道ABC需要类似的结构，我们重写一下，总而言之就是一个支持区间修改以及RMQ的线段树</p>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1253">题目链接</a></p>
 <p>如果说有一个add下来，碰到了cover懒标记，需要把他先下传再加</p>
-<p><img src="https://cdn.yunminitools.cn/znzrybPic/Screenshot%202025-02-19%20at%2021.37.30.png" alt="alt text"></p>
+<p><img src="https://cdn.yunminitools.cn/znzrybPic/Screenshot%202025-02-19%20at%2021.37.30.png" alt="alt text" /></p>
 <p>cover如果下来，也要下传，但最后完全包裹的需要清除其他懒标记</p>
 <p>那么这样会导致什么问题嘛？</p>
 <p>其实最重要的就是add要在最新的值上加，这是可以保证的，因为如果cover的范围比较大，比add大，那么已经被cover pushdown了，那么如果说add大，cover小那？其实不用太担心，因为add是</p>
@@ -340,6 +340,12 @@
   
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
 
 
 
