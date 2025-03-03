@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -171,6 +171,112 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://znzryb.github.io/2025/03/02/Donghua-CCCC-select/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="znzryb">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="znzryb's blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | znzryb's blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/03/02/Donghua-CCCC-select/" class="post-title-link" itemprop="url">天梯赛选拔赛(补题)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-03-02 21:47:23" itemprop="dateCreated datePublished" datetime="2025-03-02T21:47:23+08:00">2025-03-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2025-03-03 18:50:26" itemprop="dateModified" datetime="2025-03-03T18:50:26+08:00">2025-03-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/codeforces%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">codeforces题解</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="L2-2-逃离庄园"><a href="#L2-2-逃离庄园" class="headerlink" title="L2-2 逃离庄园"></a>L2-2 逃离庄园</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>在《第五人格》的庄园中，求生者们需要通过破解密码机来逃离庄园。庄园中一共有n台密码机，你需要破解其中的k台密码机打开大门,一台密码机只能破解一次。同时，每台密码机都有一个独特的破解函数$score_i（x）&#x3D;a_ix+b_i$，表示的是：若破解之前的分数的为x，则破解完之后分数会变成$a_ix+b_i$。一开始的分数为1。</p>
+<p>现在你知道每台密码机的位置，及其破解函数，你的任务是帮助求生者们得到最大的分数。</p>
+<p>换言之，找到一组$p_1,p_2,…p_k$使$score_{p_1}(score_{p_2}(…score_{p_k}(x)))$最大</p>
+<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h3><p>第一行给定两个数字n,k$1 \le n \le 200000,1 \le k \le min(n,10)$</p>
+<p>后面n行，第i行给定$a_i,b_i$代表第i台机子的破解函数的参数（$1 \le a_i,b_i \le 50$）</p>
+<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a>输出描述</h3><p>一个数字，代表最大的得分</p>
+<h3 id="题面样例"><a href="#题面样例" class="headerlink" title="题面样例"></a>题面样例</h3><h4 id="样例输入1"><a href="#样例输入1" class="headerlink" title="样例输入1"></a>样例输入1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3 2</span><br><span class="line">2 3</span><br><span class="line">1 5</span><br><span class="line">4 2</span><br></pre></td></tr></table></figure>
+
+<h4 id="样例输出1"><a href="#样例输出1" class="headerlink" title="样例输出1"></a>样例输出1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">26</span><br></pre></td></tr></table></figure>
+
+<h4 id="样例输入2"><a href="#样例输入2" class="headerlink" title="样例输入2"></a>样例输入2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">10 3</span><br><span class="line">48 40</span><br><span class="line">34 22</span><br><span class="line">24 37</span><br><span class="line">45 40</span><br><span class="line">48 31</span><br><span class="line">49 44</span><br><span class="line">45 40</span><br><span class="line">44 6</span><br><span class="line">35 22</span><br><span class="line">39 28</span><br></pre></td></tr></table></figure>
+
+<h4 id="样例输出2"><a href="#样例输出2" class="headerlink" title="样例输出2"></a>样例输出2</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">216223</span><br></pre></td></tr></table></figure>
+
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>这个是动态规划还是很明显的，但是是需要不等式优化的dp，因为裸的dp想到达到这道题目的O（n）时间复杂度还是有点困难的。</p>
+<p>具体的来说，我们需要对机子进行排序，以让我们不需要考虑机子的顺序，按照排序顺序即可。</p>
+<p>满足以下式子说明a1要排在前面。<br>$$<br>a_1(a_2x+b_2)+b_1 &lt; a_2(a_1x+b_1) + b_2 \<br>a_1a_2x + a_1b_2 + b_1 &lt; a_1a_2x + a_2b_1 + b_2 \<br>a_1b_2 + b_1 &lt;a_2b_1 + b_2 \<br>a_1b_2 - b_2 &lt; a_2b_1 - b_1 \<br>\cfrac{a_1 - 1}{b_1} &lt; \cfrac{a_2 - 1}{b_2}<br>$$</p>
+<p>很明显，根据推导，该不等式具有传递性，因为a1，b1在一边，a2，b2在一边</p>
+<p>然后动态规划部分其实就是从上面一个状态推下来，dp[i][j]表示考虑到第i个物品，选j个物品所能达到的最大值</p>
+<p>这就是不考虑顺序（顺序已经是最优的情况）下，选K个物品时动态规划的套路</p>
+<p>或者你还是理解不了，背包总理解吧？选K个物品不就是背包容量为K，每个物品重量为1吗？然后背包不也不用考虑顺序或者要求顺序已经最优吗？<del>（其实是笔者自己不理解）</del></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// http://120.55.170.42/contest/1001/problem/L2-2</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> FOR(i, a, b) for (long long i = (a); i &lt;= (b); ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ROF(i, a, b) for (long long i = (a); i &gt;= (b); --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(x) x.begin(),x.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CLR(i,a) memset(i,a,sizeof(i))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fi first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> se second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SZ(a) ((int) a.size())</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> ull;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;ll,ll&gt; pll;</span><br><span class="line"><span class="keyword">typedef</span> array&lt;ll,3&gt; arr;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> DB;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;DB,DB&gt; pdd;</span><br><span class="line"><span class="keyword">constexpr</span> ll MAXN=<span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">2e5</span>)<span class="number">+10</span>,INF=<span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">5e18</span>)<span class="number">+3</span>;</span><br><span class="line"></span><br><span class="line">ll N,K,T;</span><br><span class="line">pll ab[MAXN];</span><br><span class="line">ll dp[MAXN][<span class="number">15</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">const</span> pll &amp;a,<span class="type">const</span> pll &amp;b)</span></span>&#123;</span><br><span class="line">	ll a1=a.fi,b1=a.se,a2=b.fi,b2=b.se;</span><br><span class="line">	<span class="type">long</span> <span class="type">double</span> t2=(a2<span class="number">-1</span>)*<span class="number">1.0l</span>/b2,t1=(a1<span class="number">-1</span>)*<span class="number">1.0l</span>/b1;</span><br><span class="line">	<span class="keyword">return</span> t1&lt;t2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cin&gt;&gt;N&gt;&gt;K;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=N;++i)&#123;</span><br><span class="line">		cin&gt;&gt;ab[i].fi&gt;&gt;ab[i].se;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">sort</span>(ab<span class="number">+1</span>,ab<span class="number">+1</span>+N,cmp);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=K;++i)&#123;</span><br><span class="line">		dp[<span class="number">0</span>][i]=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=N;++i)&#123;</span><br><span class="line">		dp[i][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 注意到，其实k是很小的</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=N;++i)&#123;</span><br><span class="line">		ll a=ab[i].fi,b=ab[i].se;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=K;++j)&#123;</span><br><span class="line">			dp[i][j]=<span class="built_in">max</span>(dp[i<span class="number">-1</span>][j],dp[i<span class="number">-1</span>][j<span class="number">-1</span>]*a+b);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;dp[N][K]&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	<span class="built_in">solve</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1019,88 +1125,6 @@
 <p>WA的原因是由于lower_bound()方式实现的__lg()有点问题，我们还是老老实实写一个_lg2()吧</p>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/2064/submission/306654531">AC</a></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Problem: D. Eating</span></span><br><span class="line"><span class="comment">// Contest: Codeforces - Codeforces Round 1005 (Div. 2)</span></span><br><span class="line"><span class="comment">// URL: https://codeforces.com/contest/2064/problem/D</span></span><br><span class="line"><span class="comment">// Memory Limit: 512 MB</span></span><br><span class="line"><span class="comment">// Time Limit: 5000 ms</span></span><br><span class="line"><span class="comment">// by znzryb</span></span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="comment">// Powered by CP Editor (https://cpeditor.org)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> FOR(i, a, b) for (int i = (a); i &lt;= (b); ++i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ROF(i, a, b) for (int i = (a); i &gt;= (b); --i)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> all(x) x.begin(),x.end()</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> CLR(i,a) memset(i,a,sizeof(i))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fi first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> se second</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> pb push_back</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> SZ(a) ((int) a.size())</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span> ull;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;ll,ll&gt; pll;</span><br><span class="line"><span class="keyword">typedef</span> array&lt;ll,3&gt; arr;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">double</span> DB;</span><br><span class="line"><span class="keyword">typedef</span> pair&lt;DB,DB&gt; pdd;</span><br><span class="line"><span class="keyword">constexpr</span> ll MAXN=<span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">2e5</span>)<span class="number">+10</span>,INF=<span class="built_in">static_cast</span>&lt;ll&gt;(<span class="number">5e18</span>)<span class="number">+3</span>;</span><br><span class="line"></span><br><span class="line">ll N,M,T,A[MAXN];</span><br><span class="line">ll pow2[<span class="number">40</span>];</span><br><span class="line">ll last[MAXN][<span class="number">35</span>];		<span class="comment">// 从后往前，比这位msb大的（包括相等）最大的编号在哪里（）</span></span><br><span class="line">ll sumA[MAXN];</span><br><span class="line"></span><br><span class="line"><span class="keyword">inline</span> <span class="type">int</span> _lg2(ll n) &#123;</span><br><span class="line">    <span class="type">int</span> pos = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (n) &#123;</span><br><span class="line">        n &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">        pos++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pos;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	cin&gt;&gt;N&gt;&gt;M;</span><br><span class="line">	<span class="built_in">FOR</span>(i,<span class="number">1</span>,N)&#123;</span><br><span class="line">		cin&gt;&gt;A[i];</span><br><span class="line">		ll msb=_lg2(A[i]);</span><br><span class="line">		<span class="built_in">FOR</span>(j,<span class="number">0</span>,<span class="number">33</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span>(j&lt;=msb)&#123;</span><br><span class="line">				last[i][j]=i;</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				last[i][j]=last[i<span class="number">-1</span>][j];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	sumA[N<span class="number">+1</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="built_in">ROF</span>(i,N,<span class="number">1</span>)&#123;		<span class="comment">// 异或总和</span></span><br><span class="line">		sumA[i]=sumA[i<span class="number">+1</span>]^A[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// == msb 通过计算判断能不能吃，msb必定减少</span></span><br><span class="line">	<span class="comment">// &gt; msb 吃不了</span></span><br><span class="line">	<span class="comment">// &lt; msb 可以吃</span></span><br><span class="line">	<span class="built_in">FOR</span>(i,<span class="number">1</span>,M)&#123;</span><br><span class="line">		ll x;</span><br><span class="line">		cin&gt;&gt;x;</span><br><span class="line">		ll msb=_lg2(x);</span><br><span class="line">		ll idx=last[N][msb],upPos=N<span class="number">+1</span>;</span><br><span class="line">		<span class="keyword">while</span>(idx&gt;<span class="number">0</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span>((x^(sumA[idx<span class="number">+1</span>]^sumA[upPos]))&gt;=A[idx])&#123;</span><br><span class="line"><span class="comment">// #ifdef LOCAL</span></span><br><span class="line">    <span class="comment">// cerr&lt;&lt;i&lt;&lt;&#x27; &#x27; &lt;&lt; idx&lt;&lt;&#x27; &#x27;&lt;&lt;x&lt;&lt;&#x27; &#x27;&lt;&lt; A[idx]&lt;&lt;&#x27; &#x27;&lt;&lt; (x^(sumA[idx+1]^sumA[upPos])) &lt;&lt; &#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">// #endif</span></span><br><span class="line">				x=( (x^(sumA[idx<span class="number">+1</span>]^sumA[upPos]))^A[idx]);</span><br><span class="line">				msb=_lg2(x);</span><br><span class="line">				upPos=idx;</span><br><span class="line">				idx=last[idx<span class="number">-1</span>][msb];	<span class="comment">// 第idx个我已经吃了，那自然要看第idx-1个</span></span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				<span class="comment">// idx=upPos;	</span></span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;N-idx&lt;&lt;<span class="string">&#x27; &#x27;</span>; <span class="comment">// 第idx个吃不了，但他的idx后面一个位置是可以吃的</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"><span class="comment">// #ifdef LOCAL</span></span><br><span class="line">	<span class="comment">// FOR(i,1,7)&#123;</span></span><br><span class="line">		<span class="comment">// FOR(j,1,N)&#123;</span></span><br><span class="line">			<span class="comment">// cerr&lt;&lt;last[j][i]&lt;&lt;&#x27; &#x27;;</span></span><br><span class="line">		<span class="comment">// &#125;</span></span><br><span class="line">		<span class="comment">// cerr&lt;&lt;&#x27;\n&#x27;;</span></span><br><span class="line">	<span class="comment">// &#125;</span></span><br><span class="line"><span class="comment">// #endif</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	cin&gt;&gt;T;</span><br><span class="line">	pow2[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="built_in">FOR</span>(i,<span class="number">1</span>,<span class="number">38</span>)&#123;</span><br><span class="line">		pow2[i]=pow2[i<span class="number">-1</span>]*<span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="built_in">solve</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">AC</span></span><br><span class="line"><span class="comment">https://codeforces.com/contest/2064/submission/306654531</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://znzryb.github.io/2025/02/16/DSU-template/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="znzryb">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="znzryb's blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | znzryb's blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/16/DSU-template/" class="post-title-link" itemprop="url">simpleDSU</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2025-02-16 19:05:32 / Modified: 19:09:23" itemprop="dateCreated datePublished" datetime="2025-02-16T19:05:32+08:00">2025-02-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/template/" itemprop="url" rel="index"><span itemprop="name">template</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>简单并查集模版</p>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/203250040">提交记录洛谷</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">DSU</span> &#123;  <span class="comment">// refer jiangly</span></span><br><span class="line">  vector&lt;<span class="type">int</span>&gt; fa, siz;</span><br><span class="line">  <span class="type">int</span> ln;</span><br><span class="line">  <span class="built_in">DSU</span>(<span class="type">int</span> n) &#123;</span><br><span class="line">    ln = n;</span><br><span class="line">    fa.<span class="built_in">resize</span>(ln + <span class="number">5</span>, <span class="number">0</span>), siz.<span class="built_in">resize</span>(ln + <span class="number">5</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">FOR</span>(i, <span class="number">1</span>, n) &#123;</span><br><span class="line">      fa[i] = i;</span><br><span class="line">      siz[i] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (fa[x] != x) &#123;</span><br><span class="line">      x = fa[x];</span><br><span class="line">      fa[x] = fa[fa[x]];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="type">bool</span> <span class="title">same</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123; <span class="keyword">return</span> <span class="built_in">find</span>(x) == <span class="built_in">find</span>(y); &#125;</span><br><span class="line">  <span class="function"><span class="type">bool</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    x = <span class="built_in">find</span>(x);</span><br><span class="line">    y = <span class="built_in">find</span>(y);</span><br><span class="line">    <span class="keyword">if</span> (x == y) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    siz[x] += siz[y];</span><br><span class="line">    fa[y] = x;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">size</span><span class="params">(<span class="type">int</span> x)</span> </span>&#123; <span class="keyword">return</span> siz[<span class="built_in">find</span>(x)]; &#125;</span><br><span class="line">  <span class="function"><span class="type">int</span> <span class="title">countFa</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">FOR</span>(i, <span class="number">1</span>, ln) &#123;</span><br><span class="line">      <span class="keyword">if</span> (fa[i] == i) ++res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
       
     </div>
 
